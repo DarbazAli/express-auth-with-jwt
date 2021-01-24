@@ -8,10 +8,12 @@ const userSchema = mongoose.Schema({
 
   email: {
     type: String,
-    required: true,
+    trim: true,
+    required: 'email is requred',
+    unique: 'Email already exists',
   },
 
   password: String,
 })
 
-export default User = mongoose.model('User', userSchema)
+export default mongoose.model('User', userSchema)
