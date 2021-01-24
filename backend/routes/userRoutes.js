@@ -8,5 +8,6 @@ router
   .post(userCtrl.create)
   .get(userCtrl.list)
   .put(userCtrl.update)
+  .delete(userCtrl.deleteUser)
 
 export default router

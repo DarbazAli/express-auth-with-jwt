@@ -39,9 +39,22 @@ const update = async (req, res) => {
       { $set: { email, name, password } }
     )
     if (updateUser) return res.status(200).json(updateUser)
+    else return res.status(400).send('Error: User not found')
   } catch (err) {
     return res.status(400).send(err)
   }
 }
 
-export default { create, list, update }
+const deleteUser = async (req, res) => {
+  const { id } = req.body
+
+  try {
+    const deleteUser = await User.findOneAndRemove({ _id: id })
+    if (deleteUser) return res.status(200).send('User deleted')
+    else return res.status(400).send('User not found')
+  } catch (err) {
+    return res.status(400).send(err)
+  }
+}
+
+export default { create, list, update, deleteUser }
