@@ -1,0 +1,29 @@
+{
+  "name": "express-auth-with-jwt",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarbazAli/express-auth-with-jwt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarbazAli/express-auth-with-jwt/issues"
+  },
+  "homepage": "https://github.com/DarbazAli/express-auth-with-jwt#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
